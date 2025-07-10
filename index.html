@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manage Landing Page</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <img src="./logo.svg" alt="Logo" class="logo" />
+     <i class="fa-solid fa-xmark menu-close"></i>
+    <i class="fa-solid fa-bars menu-toggle"></i>
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        
+      </ul>
+    </nav>
+      
+    <section class="intro">
+      <div class="intro-text">
+        <h1>Bring everyone together to build better products</h1>
+        <p>Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger goals in view.</p>
+        <button class="cta">Get Started</button>
+      </div>
+      <div class="intro-img">
+        <img src="./illustration-intro.svg" alt="Intro illustration"/>
+      </div>
+    </section>
+  </header>
+
+  <section class="testimonials">
+    <h2>What they've said</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="./avatar-anisha.png" alt="Anisha Li" />
+        <h3>Anisha Li</h3>
+        <p>“Manage has supercharged our team’s workflow. The ability to maintain visibility at all times keeps everyone motivated.”</p>
+      </div>
+      <div class="card">
+        <img src="./avatar-ali.png" alt="Ali Bravo" />
+        <h3>Ali Bravo</h3>
+        <p>“We have been able to cancel so many other subscriptions since using Manage. There is no more cross-channel confusion.”</p>
+      </div>
+      <div class="card">
+        <img src="./avatar-richard.png" alt="Richard Watts" />
+        <h3>Richard Watts</h3>
+        <p>“Manage allows us to provide structure and process. It keeps us organized and focused. I can’t stop recommending it.”</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-cta">
+    <h2>Simplify how your team works today.</h2>
+    <button class="cta">Get Started</button>
+  </footer>
+<script>
+  const menu = document.querySelector('.menu');
+  const openBtn = document.querySelector('.menu-toggle');
+  const closeBtn = document.querySelector('.menu-close');
+
+  openBtn.addEventListener('click', () => {
+    menu.classList.add('active');
+    openBtn.style.display = 'none';
+    closeBtn.style.display = 'block';
+  });
+
+  closeBtn.addEventListener('click', () => {
+    menu.classList.remove('active');
+    closeBtn.style.display = 'none';
+    openBtn.style.display = 'block';
+  });
+
+  // Ensure initial visibility is set
+  closeBtn.style.display = 'none';
+ 
+</script>
+
+ 
+
+</body>
+</html>
+
